@@ -1,0 +1,42 @@
+seeds:
+  - https://www.lmu.edu/
+  - https://newsroom.lmu.edu/
+  - https://events.lmu.edu/
+  - https://library.lmu.edu/
+  - https://registrar.lmu.edu/
+  - https://studentaffairs.lmu.edu/
+  - https://financialaid.lmu.edu/
+  - https://admission.lmu.edu/
+  - https://cba.lmu.edu/
+  - https://sftv.lmu.edu/
+  - https://cfa.lmu.edu/
+  - https://soe.lmu.edu/
+  - https://engineering.lmu.edu/
+  - https://seaver.lmu.edu/
+allowed_domains:
+  - lmu.edu
+  - newsroom.lmu.edu
+  - events.lmu.edu
+  - lmulions.com
+  - library.lmu.edu
+  - registrar.lmu.edu
+crawl:
+  max_pages: 300
+  request_timeout_s: 15
+  user_agent: Mozilla/5.0 (X11; Linux x86_64) lmudata-bot/0.1 (+https://www.lmu.edu/)
+  sleep_range_s: [0.3, 1.2]
+  disallow_file_types: [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".zip", ".rar", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico", ".mp4", ".mp3", ".wav", ".mov"]
+reddit:
+  enabled: true
+  subreddits: [lmu, LoyolaMarymount]
+  max_posts_per_sub: 150
+  fetch_comments: true
+  max_comments_per_post: 50
+rmp:
+  enabled: false
+  note: Optional; review ToS before enabling any scraping.
+qa_generation:
+  max_pairs_per_page: 20
+  max_pairs_from_reddit_post: 5
+  voice: casual
+  seed: 17
