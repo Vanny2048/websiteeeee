@@ -1,0 +1,18 @@
+[build]
+  publish = "site"
+
+# Optional: basic security headers
+[[headers]]
+  for = "/**"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+    X-XSS-Protection = "1; mode=block"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirect root to index.html in SPA-like manner (not strictly needed here)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
